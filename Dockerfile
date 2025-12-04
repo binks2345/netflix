@@ -19,3 +19,8 @@ RUN sed -i 's/80/10000/g' /etc/apache2/ports.conf \
 
 # Démarre Apache
 CMD ["apache2-foreground"]
+
+
+RUN echo "display_errors = Off" >> /usr/local/etc/php/conf.d/custom.ini \
+    && echo "display_startup_errors = Off" >> /usr/local/etc/php/conf.d/custom.ini \
+    && echo "error_reporting = E_ALL & ~E_WARNING & ~E_NOTICE" >> /usr/local/etc/php/conf.d/custom.ini
