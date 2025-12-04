@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: mon-projet-php
+    name: netflix
     env: php
     plan: free
     buildCommand: ""
